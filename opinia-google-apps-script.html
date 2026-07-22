@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W Szponach Gitary — Dodaj opinię</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Oswald:wght@500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:#0f0f0f;color:#fff;font-family:'Open Sans',sans-serif;min-height:100vh}.page{width:min(1060px,calc(100% - 28px));margin:24px auto 50px}.top{display:flex;align-items:center;gap:13px;margin-bottom:18px}.top-badge{width:46px;height:46px;border:1px solid #ffcc00;border-radius:50%;display:grid;place-items:center;color:#ffcc00;font-size:23px;box-shadow:0 0 12px rgba(255,204,0,.24)}h1{font:600 clamp(24px,4vw,36px)/1.1 'Oswald',sans-serif;margin:0}.lead{color:#aaa;font-size:13px;line-height:1.55;margin:5px 0 0}.panel{background:#191919;border:1px solid #303030;border-radius:14px;padding:20px;box-shadow:0 15px 55px rgba(0,0,0,.35)}.config{display:none;margin-bottom:16px;border:1px solid rgba(255,204,0,.45);background:rgba(255,204,0,.06);border-radius:10px;padding:13px}.config.open{display:block}.config strong{color:#ffcc00;display:block;margin-bottom:5px}.config p{font-size:12px;color:#bbb;margin:0 0 9px;line-height:1.5}.config-line{display:flex;gap:8px}.config input{flex:1;min-width:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.wide{grid-column:1/-1}.field label,.field-title{display:block;color:#c5c5c5;font-size:11px;font-weight:800;margin:0 0 6px}.field input,.field select,.field textarea,.config input{width:100%;border:1px solid #383838;border-radius:8px;background:#101010;color:#fff;font:13px 'Open Sans',sans-serif;padding:10px 11px;outline:none}.field input:focus,.field select:focus,.field textarea:focus,.config input:focus{border-color:#ffcc00;box-shadow:0 0 0 2px rgba(255,204,0,.1)}.field textarea{min-height:132px;resize:vertical;line-height:1.5}.counter{text-align:right;color:#777;font-size:10px;margin-top:4px}.photo-area{display:flex;align-items:center;gap:15px;flex-wrap:wrap}.crop-shell{display:none}.crop-shell.open{display:block}.crop-canvas{width:170px;height:170px;border-radius:50%;border:4px solid #c8f5fb;background:#101010;cursor:grab;touch-action:none}.crop-canvas.dragging{cursor:grabbing}.crop-settings{flex:1;min-width:220px}.crop-settings input[type=range]{width:100%;accent-color:#ffcc00}.crop-help{font-size:10px;line-height:1.5;color:#888;margin-top:5px}.file-button,.small-button,.action{border-radius:8px;font:800 11px 'Open Sans',sans-serif;cursor:pointer}.file-button,.small-button{border:1px solid #424242;color:#fff;background:#252525;padding:9px 12px}.small-button{border-color:#8a7100;background:#2b2509;color:#ffdc49;white-space:nowrap}.stars{display:flex;gap:5px}.star{border:0;background:transparent;color:#555;font-size:34px;line-height:1;cursor:pointer;padding:0 2px}.star.active{color:#eda52b;text-shadow:0 0 8px rgba(237,165,43,.45)}.check{display:flex;align-items:flex-start;gap:9px;color:#bbb;font-size:11px;line-height:1.5}.check input{margin-top:3px;accent-color:#ffcc00;flex:0 0 auto}.privacy{font-size:10.5px;color:#999;line-height:1.55;background:#111;border-radius:9px;padding:11px;border:1px solid #292929}.privacy strong{color:#ccc}.preview-wrap{margin-top:16px}.preview-title{font:600 16px 'Oswald',sans-serif;margin-bottom:8px}.preview-surface{border:1px solid #303030;border-radius:11px;background:radial-gradient(circle at 50% 50%,#262626,#090909 70%);padding:10px}.preview-surface canvas{display:block;width:100%;height:auto}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.action{min-height:43px;padding:10px 16px;border:1px solid #3d3d3d;background:#222;color:#fff;flex:1;min-width:155px}.action.primary{border:0;background:#ffcc00;color:#111;box-shadow:0 0 10px rgba(255,204,0,.26)}.action:disabled{opacity:.5;cursor:wait}.status{min-height:22px;margin-top:11px;color:#8bc34a;font-size:12px;line-height:1.45}.status.error{color:#ff7777}.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}.note{margin-top:12px;color:#888;font-size:10.5px;line-height:1.5}.optional{font-weight:400;color:#777}.noscript{margin:20px;color:#ff8c8c}
+@media(max-width:720px){.page{width:min(100% - 18px,620px);margin-top:12px}.panel{padding:14px}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.config-line{flex-direction:column}.top-badge{width:40px;height:40px}.photo-area{align-items:flex-start}.crop-canvas{width:145px;height:145px}.actions{flex-direction:column}.action{width:100%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+ .star{color:#eda52b}
+</style>
+<style>@media(max-width:720px){.top{flex-wrap:wrap}.top>div:last-child{width:100%;margin-left:0!important}.top .small-button{flex:1;margin-left:0!important}}</style>
+<style>
+.calibration{margin-bottom:16px;border-color:#5adefa;background:linear-gradient(145deg,rgba(90,222,250,.08),rgba(255,204,0,.035))}.calibration-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:13px}.calibration-title{font:600 18px 'Oswald',sans-serif;color:#5adefa}.calibration-copy{font-size:11px;color:#aaa;line-height:1.5;margin-top:3px}.calibration-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px 14px}.calibration-control{background:#111;border:1px solid #2d3436;border-radius:8px;padding:8px}.calibration-control label{display:flex;justify-content:space-between;gap:8px;color:#ccc;font-size:10px;font-weight:700;margin-bottom:5px}.calibration-control output{color:#5adefa;white-space:nowrap}.calibration-control input{width:100%;accent-color:#5adefa}.calibration-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.dual-preview{display:grid;grid-template-columns:1fr 1fr;gap:13px}.preview-variant{min-width:0}.preview-variant-title{font-size:11px;color:#aaa;font-weight:800;margin:0 0 6px;text-transform:uppercase;letter-spacing:.08em}.preview-surface canvas{width:100%}.copied-settings{width:100%;min-height:80px;margin-top:10px;background:#090909;border:1px solid #2d3436;border-radius:8px;color:#bbb;padding:9px;font:10px/1.45 Consolas,monospace;resize:vertical;display:none}.copied-settings.open{display:block}
+@media(max-width:900px){.calibration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dual-preview{grid-template-columns:1fr}}
+@media(max-width:540px){.calibration-grid{grid-template-columns:1fr}.calibration-head{display:block}.calibration-head .small-button{margin-top:9px;width:100%}}
+</style>
+<style>
+.page{width:min(1540px,calc(100% - 28px))}
+.workspace{display:grid;grid-template-columns:minmax(330px,390px) minmax(0,1fr);gap:18px;align-items:start}
+.editor-sidebar{position:sticky;top:14px;max-height:calc(100vh - 28px);overflow-y:auto;padding-right:4px;scrollbar-color:#444 #171717}
+.editor-sidebar .config{margin-bottom:14px}
+.editor-sidebar .calibration{margin-bottom:0}
+.editor-sidebar .calibration-grid{grid-template-columns:1fr}
+.form-column{min-width:0}
+.form-column>.panel{margin:0}
+.workspace{display:block}.page{width:min(1100px,calc(100% - 28px))}.avatar-choice{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}.avatar-choice label{display:flex;align-items:center;gap:6px;border:1px solid #383838;border-radius:8px;background:#111;padding:8px 11px;color:#ccc;font-size:11px;font-weight:700;cursor:pointer}.avatar-choice input{accent-color:#ffcc00}.action.primary{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.template-picker{margin:18px 0 16px}.template-picker-title{font:600 18px 'Oswald',sans-serif;margin-bottom:4px}.template-picker-copy{font-size:11px;color:#999;line-height:1.45;margin-bottom:12px}.template-group-title{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin:12px 0 7px}.template-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.template-option{appearance:none;background:#121212;border:1px solid #333;border-radius:9px;padding:6px;cursor:pointer;color:#ddd;text-align:left;transition:border-color .18s,box-shadow .18s,transform .18s}.template-option:hover{transform:translateY(-2px);border-color:#777}.template-option.active{border-color:#ffcc00;box-shadow:0 0 13px rgba(255,204,0,.22)}.template-option canvas{display:block;width:100%;aspect-ratio:16/9;border-radius:5px;background:#080808}.template-option span{display:block;font-size:9px;font-weight:800;margin:5px 2px 1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.template-option small{display:block;color:#777;font-size:8px;margin:0 2px}.selected-template-note{font-size:10px;color:#ffcc00;margin-top:8px}
+@media(max-width:1000px){
+  .page{width:min(100% - 18px,900px)}
+  .workspace{grid-template-columns:1fr}
+  .editor-sidebar{position:static;max-height:none;overflow:visible;padding-right:0}
+  .editor-sidebar .calibration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){.template-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.editor-sidebar .calibration-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<noscript><div class="noscript">Formularz wymaga włączonego JavaScriptu.</div></noscript>
+<main class="page">
+  <header class="top">
+    <div class="top-badge" aria-hidden="true">★</div>
+    <div><h1>Dodaj opinię o produkcie</h1><p class="lead">Przygotuj gotową grafikę PNG i wyślij ją bezpośrednio do W Szponach Gitary.</p></div>
+  </header>
+
+  <div class="workspace">
+  <div class="form-column">
+  <section class="panel">
+    <form id="review-form" novalidate>
+      <input class="honeypot" id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="grid">
+        <div class="field"><label for="product">Produkt</label><select id="product"><option>Najlepsze Polskie Riffy</option><option>Gitarowe Ćwiczenia</option></select></div>
+        <div class="field"><label for="name">Imię lub podpis</label><input id="name" maxlength="40" autocomplete="name" placeholder="np. Artur S." required></div>
+        <div class="field"><label for="email">Twój e-mail <span class="optional">(opcjonalnie, tylko do kontaktu)</span></label><input id="email" type="email" maxlength="120" autocomplete="email" placeholder="np. klient@gmail.com"></div>
+        <div class="field"><span class="field-title">Ocena produktu</span><div class="stars" id="stars" role="radiogroup" aria-label="Ocena od 1 do 5 gwiazdek"></div></div>
+
+        <div class="field wide">
+          <label for="photo">Zdjęcie <span class="optional">(opcjonalnie)</span></label>
+          <span class="field-title">Avatar zastępczy, jeśli nie dodasz zdjęcia</span>
+          <div class="avatar-choice"><label><input type="radio" name="default-avatar" value="male" checked> Męski</label><label><input type="radio" name="default-avatar" value="female"> Żeński</label></div>
+          <div class="photo-area">
+            <input id="photo" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+            <button class="file-button" type="button" onclick="document.getElementById('photo').click()">WYBIERZ ZDJĘCIE</button>
+            <button class="file-button" id="remove-photo" type="button" onclick="removePhoto()" hidden>USUŃ ZDJĘCIE</button>
+            <div class="crop-shell" id="crop-shell"><canvas class="crop-canvas" id="crop-canvas" width="340" height="340" aria-label="Edytor kadru zdjęcia"></canvas></div>
+            <div class="crop-settings" id="crop-settings" hidden><label for="zoom">Powiększenie: <span id="zoom-value">100%</span></label><input id="zoom" type="range" min="1" max="3" step="0.01" value="1"><div class="crop-help">Przeciągnij zdjęcie palcem lub myszą, aby ustawić twarz. Suwak pozwala zmienić powiększenie.</div></div>
+          </div>
+        </div>
+
+        <div class="field wide"><label for="review">Krótka opinia</label><div style="margin:4px 0 8px;color:#aaa;font-size:12px;line-height:1.45;">Napisz krótką opinię — maksymalnie 180 znaków. Możesz polecić ten produkt innym gitarzystom lub powiedzieć mi, co warto w nim jeszcze poprawić.</div><textarea id="review" maxlength="180" placeholder="Napisz swoją opinię…" required></textarea><div class="counter" id="counter">0 / 180</div></div>
+
+        <label class="check wide"><input id="data-consent" type="checkbox" required><span>Potwierdzam, że zapoznałem(-am) się z informacją o przetwarzaniu danych i zgadzam się na wykorzystanie podanych danych w celu odebrania oraz obsługi mojej opinii. <b>(wymagane)</b></span></label>
+        <label class="check wide"><input id="publication-consent" type="checkbox"><span>Zgadzam się na nieodpłatne opublikowanie opinii, podpisu i przesłanego zdjęcia w materiałach dotyczących wybranego produktu, na stronie internetowej i w mediach społecznościowych. Wiem, że mogę wycofać tę zgodę. <b>(dobrowolne)</b></span></label>
+        <div class="privacy wide"><strong>Informacja o prywatności:</strong> administratorem danych jest Tomasz Czerniuk, kontakt: tomaszczerniuk@gmail.com. Dane zostaną użyte do przyjęcia opinii, kontaktu w jej sprawie oraz — wyłącznie po zaznaczeniu dobrowolnej zgody — do publikacji. Formularz przekazuje dane przez Google Apps Script i usługę pocztową Google. Masz prawo dostępu, poprawienia i usunięcia danych, ograniczenia przetwarzania, wycofania zgody oraz złożenia skargi do Prezesa UODO. Wycofanie zgody nie wpływa na zgodność wcześniejszego przetwarzania.</div>
+      </div>
+
+      <div class="preview-wrap"><div class="preview-title">Podgląd jasnej i ciemnej wersji opinii</div><div class="dual-preview"><div class="preview-variant"><div class="preview-variant-title">Wersja jasna</div><div class="preview-surface"><canvas id="output-light" width="1024" height="576" aria-label="Jasna wersja wygenerowanej opinii"></canvas></div></div><div class="preview-variant"><div class="preview-variant-title">Wersja ciemna</div><div class="preview-surface"><canvas id="output-dark" width="1024" height="576" aria-label="Ciemna wersja wygenerowanej opinii"></canvas></div></div></div></div>
+
+      <div class="actions">
+        <button class="action primary" id="send-button" type="button" onclick="sendReview()"><span aria-hidden="true" style="font-size:18px;line-height:1;">➤</span> WYŚLIJ OPINIĘ</button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+      <div class="note">Zdjęcie nie jest wymagane. Jeśli go nie dodasz, grafika otrzyma neutralny, szary awatar gitarzysty. Przed wysłaniem możesz również pobrać PNG jako kopię zapasową.</div>
+    </form>
+  </section>
+  </div>
+  </div>
+</main>
+
+<script>
+const FORM_TOKEN = 'WSG_OPINIA_2026_V1';
+const DEFAULT_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwvWlBF6u7UxVi5vCulYTtm_Z_gumekiDf_SJvlfJndHgIMjWGXsNYb0Vg6zGDa1XF_/exec';
+const COOLDOWN_STORAGE_KEY = 'wsg_review_last_submission';
+const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
+const formOpenedAt = Date.now();
+let rating = 5;
+let photoImage = null;
+let photoZoom = 1;
+let photoOffsetX = 0;
+let photoOffsetY = 0;
+let dragState = null;
+let defaultAvatarStyle = 'male';
+const DEFAULT_AVATAR_URLS = Object.freeze({
+  male: 'https://raw.githubusercontent.com/WujekSzpon/wspolne-materialy/main/avatary/review-rock-avatar-female-male.jpg',
+  female: 'https://raw.githubusercontent.com/WujekSzpon/wspolne-materialy/main/avatary/review-rock-avatar-female.png'
+});
+const defaultAvatarImages = { male: null, female: null };
+const REVIEW_TEMPLATES = Object.freeze([
+  {id:'reference-light',theme:'light',name:'Wzór jasny',bg:['#bceff4','#f4f5f5'],text:'#101313',accent:'#148fa0',muted:'#d9fbff',stars:'#f7f4ef'},
+  {id:'reference-dark',theme:'dark',name:'Wzór ciemny',bg:['#162630','#080b0d'],text:'#f5f7f8',accent:'#5adefa',muted:'#17323b',stars:'#171b1d'}
+]);
+
+const $ = id => document.getElementById(id);
+
+const calibration = Object.freeze({groupX:-9,cardX:172,cardY:63,cardW:815,cardH:430,cardRadius:28,avatarX:72,avatarY:182,avatarSize:199,avatarHalo:18,contentX:325,nameY:124,nameSize:37,productX:325,productY:163,productSize:34,reviewY:225,reviewWidth:610,reviewHeight:224,reviewMaxFont:47,reviewMinFont:20,lineHeight:124,starsX:601,starsY:462,starsW:340,starsH:72,starsRadius:20,starSize:67,glow:165});
+
+function getTemplate(id){return REVIEW_TEMPLATES.find(template=>template.id===id)||REVIEW_TEMPLATES[0];}
+
+function endpoint() { return DEFAULT_APPS_SCRIPT_ENDPOINT; }
+
+function buildStars() {
+  $('stars').innerHTML = '';
+  for (let value = 1; value <= 5; value++) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'star';
+    button.textContent = '☆';
+    button.setAttribute('role','radio');
+    button.setAttribute('aria-label', `${value} ${value === 1 ? 'gwiazdka' : 'gwiazdki'}`);
+    button.onclick = () => setRating(value);
+    $('stars').appendChild(button);
+  }
+}
+function setRating(value) {
+  rating = value;
+  document.querySelectorAll('.star').forEach((star,index) => {
+    const active = index < rating;
+    star.classList.toggle('active', active);
+    star.textContent = active ? '★' : '☆';
+    star.setAttribute('aria-checked', String(index + 1 === rating));
+  });
+  renderBothReviews();
+}
+
+function setStatus(message, error = false) {
+  $('status').textContent = message;
+  $('status').classList.toggle('error', error);
+}
+
+function roundedRect(ctx,x,y,w,h,r) {
+  const radius = Math.min(r,w/2,h/2);
+  ctx.beginPath();ctx.moveTo(x+radius,y);ctx.arcTo(x+w,y,x+w,y+h,radius);ctx.arcTo(x+w,y+h,x,y+h,radius);ctx.arcTo(x,y+h,x,y,radius);ctx.arcTo(x,y,x+w,y,radius);ctx.closePath();
+}
+
+function drawDefaultAvatar(ctx,x,y,size,style=defaultAvatarStyle) {
+  ctx.save();roundedRect(ctx,x,y,size,size,size/2);ctx.clip();
+  const gradient=ctx.createLinearGradient(x,y,x+size,y+size);gradient.addColorStop(0,'#525252');gradient.addColorStop(1,'#171717');ctx.fillStyle=gradient;ctx.fillRect(x,y,size,size);
+  ctx.translate(x+size/2,y+size/2);ctx.strokeStyle='#b8b8b8';ctx.fillStyle='#2c2c2c';ctx.lineWidth=size*.055;ctx.lineCap='round';ctx.lineJoin='round';
+  if(style==='female'){ctx.fillStyle='#202020';ctx.beginPath();ctx.arc(-size*.08,-size*.18,size*.19,Math.PI*.82,Math.PI*2.18);ctx.lineTo(size*.11,size*.18);ctx.lineTo(-size*.27,size*.18);ctx.closePath();ctx.fill();ctx.fillStyle='#343434';}else{ctx.fillStyle='#1d1d1d';ctx.beginPath();ctx.arc(-size*.08,-size*.25,size*.13,Math.PI,Math.PI*2);ctx.fill();ctx.fillStyle='#2c2c2c';}
+  ctx.beginPath();ctx.arc(-size*.08,-size*.2,size*.12,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.moveTo(-size*.08,-size*.07);ctx.lineTo(-size*.13,size*.22);ctx.moveTo(-size*.09,0);ctx.lineTo(size*.13,size*.09);ctx.moveTo(-size*.11,size*.2);ctx.lineTo(-size*.28,size*.37);ctx.moveTo(-size*.1,size*.2);ctx.lineTo(size*.08,size*.39);ctx.stroke();
+  ctx.rotate(-.35);ctx.fillStyle='#111';ctx.beginPath();ctx.ellipse(size*.08,size*.1,size*.24,size*.13,0,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#c5c5c5';ctx.stroke();ctx.beginPath();ctx.moveTo(size*.24,size*.06);ctx.lineTo(size*.47,-size*.03);ctx.stroke();
+  ctx.restore();
+}
+
+function imagePlacement(image,x,y,w,h,zoom,offsetX,offsetY) {
+  const scale=Math.max(w/image.width,h/image.height)*zoom;
+  const dw=image.width*scale,dh=image.height*scale;
+  let dx=x+(w-dw)/2+offsetX*w,dy=y+(h-dh)/2+offsetY*h;
+  dx=Math.min(x,Math.max(x+w-dw,dx));dy=Math.min(y,Math.max(y+h-dh,dy));
+  return {dx,dy,dw,dh};
+}
+function drawPhoto(ctx,x,y,size) {
+  const sourceImage=photoImage||defaultAvatarImages[defaultAvatarStyle];
+  if (!sourceImage) return drawDefaultAvatar(ctx,x,y,size,defaultAvatarStyle);
+  const p=imagePlacement(sourceImage,x,y,size,size,photoImage?photoZoom:1,photoImage?photoOffsetX:0,photoImage?photoOffsetY:0);
+  ctx.save();ctx.beginPath();ctx.arc(x+size/2,y+size/2,size/2,0,Math.PI*2);ctx.clip();ctx.drawImage(sourceImage,p.dx,p.dy,p.dw,p.dh);ctx.restore();
+}
+
+function preloadDefaultAvatars(){
+  Object.entries(DEFAULT_AVATAR_URLS).forEach(([style,url])=>{const image=new Image();image.crossOrigin='anonymous';image.onload=()=>{defaultAvatarImages[style]=image;renderBothReviews();};image.onerror=()=>console.warn(`Nie udało się wczytać avatara: ${style}`);image.src=url;});
+}
+function drawCropEditor() {
+  const canvas=$('crop-canvas'),ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#111';ctx.fillRect(0,0,canvas.width,canvas.height);
+  if (photoImage) { const p=imagePlacement(photoImage,0,0,canvas.width,canvas.height,photoZoom,photoOffsetX,photoOffsetY);ctx.drawImage(photoImage,p.dx,p.dy,p.dw,p.dh); }
+}
+
+function wrapText(ctx,text,maxWidth) {
+  const words=String(text).trim().split(/\s+/).filter(Boolean),lines=[];let line='';
+  words.forEach(word=>{const test=line?`${line} ${word}`:word;if(ctx.measureText(test).width<=maxWidth||!line)line=test;else{lines.push(line);line=word;}});if(line)lines.push(line);return lines;
+}
+function fitReviewText(ctx,text,maxWidth,maxHeight,maxFont,minFont,lineRatio) {
+  for(let size=maxFont;size>=minFont;size--){ctx.font=`600 ${size}px 'Open Sans',Arial,sans-serif`;const lines=wrapText(ctx,text,maxWidth),lineHeight=size*lineRatio;if(lines.length*lineHeight<=maxHeight)return{size,lines,lineHeight};}
+  ctx.font=`600 ${minFont}px 'Open Sans',Arial,sans-serif`;return{size:minFont,lines:wrapText(ctx,text,maxWidth),lineHeight:minFont*lineRatio};
+}
+
+function renderReviewTemplate(templateId,canvas,thumbnail=false) {
+  const template=getTemplate(templateId),ctx=canvas.getContext('2d'),c=calibration,dark=template.theme==='dark',glow=c.glow/100,shiftX=c.groupX||0;ctx.clearRect(0,0,canvas.width,canvas.height);
+  const cardX=c.cardX+shiftX,avatarX=c.avatarX+shiftX,contentX=c.contentX+shiftX,productX=c.productX+shiftX,starsX=c.starsX+shiftX;
+  const cardGradient=ctx.createLinearGradient(cardX,c.cardY,cardX+c.cardW,c.cardY+c.cardH);cardGradient.addColorStop(0,template.bg[0]);cardGradient.addColorStop(1,template.bg[1]);
+  ctx.save();ctx.shadowColor=dark?template.accent:'rgba(0,0,0,.25)';ctx.shadowBlur=(dark?24:14)*glow;ctx.fillStyle=cardGradient;roundedRect(ctx,cardX,c.cardY,c.cardW,c.cardH,c.cardRadius);ctx.fill();ctx.strokeStyle=template.accent;ctx.lineWidth=4;ctx.stroke();ctx.restore();
+  const avatarCenterX=avatarX+c.avatarSize/2,avatarCenterY=c.avatarY+c.avatarSize/2;
+  ctx.save();ctx.shadowColor=dark?template.accent:'rgba(0,0,0,.24)';ctx.shadowBlur=(dark?22:15)*glow;ctx.fillStyle=template.muted;ctx.beginPath();ctx.arc(avatarCenterX,avatarCenterY,c.avatarSize/2+c.avatarHalo,0,Math.PI*2);ctx.fill();ctx.strokeStyle=template.accent;ctx.lineWidth=4;ctx.stroke();ctx.restore();drawPhoto(ctx,avatarX,c.avatarY,c.avatarSize);
+  const name=$('name').value.trim()||'Twój podpis',product=$('product').value,review=$('review').value.trim()||'Tutaj pojawi się Twoja opinia o produkcie.';
+  ctx.fillStyle=template.text;ctx.font=`800 ${c.nameSize}px 'Open Sans',Arial,sans-serif`;ctx.fillText(name,contentX,c.nameY);
+  let productSize=c.productSize;while(productSize>18){ctx.font=`800 ${productSize}px 'Open Sans',Arial,sans-serif`;if(productX+ctx.measureText(product).width<=cardX+c.cardW-28)break;productSize--;}ctx.fillStyle=dark?template.accent:'#555f63';ctx.fillText(product,productX,c.productY);
+  ctx.fillStyle=template.text;const fitted=fitReviewText(ctx,review,c.reviewWidth,c.reviewHeight,c.reviewMaxFont,c.reviewMinFont,c.lineHeight/100);ctx.font=`600 ${fitted.size}px 'Open Sans',Arial,sans-serif`;fitted.lines.forEach((line,index)=>ctx.fillText(line,contentX,c.reviewY+index*fitted.lineHeight));
+  ctx.save();ctx.shadowColor=dark?template.accent:'rgba(0,0,0,.15)';ctx.shadowBlur=(dark?18:8)*glow;ctx.fillStyle=template.stars;roundedRect(ctx,starsX,c.starsY,c.starsW,c.starsH,c.starsRadius);ctx.fill();ctx.strokeStyle=template.accent;ctx.lineWidth=4;ctx.stroke();ctx.restore();
+  ctx.font=`${c.starSize}px Arial,sans-serif`;const gold='#eda52b',starGlyph='★',starWidth=ctx.measureText(starGlyph).width,gap=3,totalWidth=starWidth*5+gap*4;let starX=starsX+(c.starsW-totalWidth)/2;for(let index=0;index<5;index++){if(index<rating){ctx.fillStyle=gold;ctx.fillText(starGlyph,starX,c.starsY+c.starsH*.73);}else{ctx.save();ctx.strokeStyle=gold;ctx.lineWidth=2.8;ctx.lineJoin='round';ctx.strokeText(starGlyph,starX,c.starsY+c.starsH*.73);ctx.restore();}starX+=starWidth+gap;}
+  return canvas;
+}
+
+function renderReviewTheme(theme,canvas){return renderReviewTemplate(theme==='light'?'reference-light':'reference-dark',canvas);}
+
+function renderBothReviews(){return{light:renderReviewTheme('light',$('output-light')),dark:renderReviewTheme('dark',$('output-dark'))};}
+
+function safeFileName() { return ($('name').value.trim()||'opinia').replace(/[^a-zA-Z0-9ąćęłńóśźżĄĆĘŁŃÓŚŹŻ_-]+/g,'-').replace(/^-+|-+$/g,'').slice(0,45)||'opinia'; }
+function triggerPngDownload(canvas,fileName){const link=document.createElement('a');link.download=fileName;link.href=canvas.toDataURL('image/png');link.click();}
+function downloadPngs(){const rendered=renderBothReviews(),base=safeFileName();triggerPngDownload(rendered.light,`opinia-${base}-jasna.png`);triggerPngDownload(rendered.dark,`opinia-${base}-ciemna.png`);setStatus('Rozpoczęto pobieranie jasnej i ciemnej wersji PNG. Przeglądarka może poprosić o zgodę na wiele plików.');}
+
+function validateForm() {
+  if (!$('name').value.trim()) return 'Wpisz imię lub podpis.';
+  if (!rating) return 'Wybierz ocenę od 1 do 5 gwiazdek.';
+  if (!$('review').value.trim()) return 'Napisz krótką opinię.';
+  if ($('review').value.trim().length > 180) return 'Opinia może zawierać maksymalnie 180 znaków.';
+  if ($('email').value && !$('email').validity.valid) return 'Sprawdź poprawność adresu e-mail.';
+  if (!$('data-consent').checked) return 'Zaznacz wymaganą zgodę na obsługę opinii.';
+  if ($('website').value) return 'Formularz został odrzucony.';
+  if (Date.now()-formOpenedAt<4000) return 'Odczekaj kilka sekund i spróbuj ponownie.';
+  return '';
+}
+
+async function sendReview() {
+  const error=validateForm();if(error)return setStatus(error,true);
+  const url=endpoint();if(!url)return setStatus('Brakuje adresu wdrożenia Google Apps Script.',true);
+  const last=Number(localStorage.getItem(COOLDOWN_STORAGE_KEY)||0);if(Date.now()-last<60000)return setStatus('Opinia była przed chwilą wysyłana. Odczekaj minutę przed kolejną próbą.',true);
+  const rendered=renderBothReviews(),lightPngData=rendered.light.toDataURL('image/png'),darkPngData=rendered.dark.toDataURL('image/png');
+  const lightBytes=Math.ceil((lightPngData.length-lightPngData.indexOf(',')-1)*.75),darkBytes=Math.ceil((darkPngData.length-darkPngData.indexOf(',')-1)*.75);if(lightBytes>MAX_IMAGE_BYTES||darkBytes>MAX_IMAGE_BYTES)return setStatus('Jedna z wygenerowanych grafik PNG jest zbyt duża. Użyj mniejszego zdjęcia.',true);
+  const base=safeFileName();const payload={token:FORM_TOKEN,product:$('product').value,name:$('name').value.trim(),email:$('email').value.trim(),rating,review:$('review').value.trim(),consentData:$('data-consent').checked,consentPublication:$('publication-consent').checked,hasPhoto:Boolean(photoImage),lightPngData,darkPngData,lightFileName:`opinia-${base}-jasna.png`,darkFileName:`opinia-${base}-ciemna.png`,openedAt:new Date(formOpenedAt).toISOString(),submittedAt:new Date().toISOString(),sourceUrl:location.href,website:$('website').value};
+  const button=$('send-button');button.disabled=true;button.innerHTML='<span aria-hidden="true" style="font-size:18px;line-height:1;">➤</span> WYSYŁANIE…';setStatus('Przekazuję opinię do Google Apps Script…');
+  try{
+    await fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+    localStorage.setItem(COOLDOWN_STORAGE_KEY,String(Date.now()));
+    setStatus('Opinia została przekazana do wysłania. Dziękuję! Jeśli wiadomość nie pojawi się w skrzynce, pobierz PNG i skontaktuj się mailowo.');
+  }catch(e){setStatus('Nie udało się połączyć ze skryptem Google. Sprawdź internet i adres wdrożenia.',true);}
+  finally{button.disabled=false;button.innerHTML='<span aria-hidden="true" style="font-size:18px;line-height:1;">➤</span> WYŚLIJ OPINIĘ';}
+}
+
+function loadPhoto(event) {
+  const file=event.target.files?.[0];if(!file)return;if(!/^image\/(png|jpeg|webp)$/i.test(file.type))return setStatus('Wybierz plik PNG, JPG albo WebP.',true);if(file.size>8*1024*1024)return setStatus('Zdjęcie wejściowe może mieć maksymalnie 8 MB.',true);
+  const image=new Image();image.onload=()=>{photoImage=image;photoZoom=1;photoOffsetX=0;photoOffsetY=0;$('zoom').value='1';$('zoom-value').textContent='100%';$('crop-shell').classList.add('open');$('crop-settings').hidden=false;$('remove-photo').hidden=false;drawCropEditor();renderBothReviews();URL.revokeObjectURL(image.src);};image.src=URL.createObjectURL(file);
+}
+function removePhoto(){photoImage=null;photoZoom=1;photoOffsetX=0;photoOffsetY=0;$('photo').value='';$('crop-shell').classList.remove('open');$('crop-settings').hidden=true;$('remove-photo').hidden=true;renderBothReviews();}
+
+function startDrag(event){if(!photoImage)return;dragState={x:event.clientX,y:event.clientY};$('crop-canvas').classList.add('dragging');$('crop-canvas').setPointerCapture?.(event.pointerId);}
+function moveDrag(event){if(!dragState||!photoImage)return;const rect=$('crop-canvas').getBoundingClientRect();photoOffsetX+=(event.clientX-dragState.x)/rect.width;photoOffsetY+=(event.clientY-dragState.y)/rect.height;photoOffsetX=Math.max(-1.5,Math.min(1.5,photoOffsetX));photoOffsetY=Math.max(-1.5,Math.min(1.5,photoOffsetY));dragState={x:event.clientX,y:event.clientY};drawCropEditor();renderBothReviews();}
+function endDrag(){dragState=null;$('crop-canvas').classList.remove('dragging');}
+
+$('photo').addEventListener('change',loadPhoto);$('zoom').addEventListener('input',event=>{photoZoom=Number(event.target.value);$('zoom-value').textContent=`${Math.round(photoZoom*100)}%`;drawCropEditor();renderBothReviews();});
+$('crop-canvas').addEventListener('pointerdown',startDrag);$('crop-canvas').addEventListener('pointermove',moveDrag);$('crop-canvas').addEventListener('pointerup',endDrag);$('crop-canvas').addEventListener('pointercancel',endDrag);
+$('review').addEventListener('input',()=>{$('counter').textContent=`${$('review').value.length} / 180`;renderBothReviews();});
+$('name').addEventListener('input',renderBothReviews);$('product').addEventListener('change',renderBothReviews);
+document.querySelectorAll('input[name="default-avatar"]').forEach(input=>input.addEventListener('change',event=>{defaultAvatarStyle=event.target.value;renderBothReviews();}));
+buildStars();setRating(5);renderBothReviews();preloadDefaultAvatars();
+</script>
+</body>
+</html>
