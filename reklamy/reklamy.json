@@ -3,5 +3,39 @@
     "minimalnaLiczbaPorad": 3,
     "maksymalnaLiczbaPorad": 5
   },
-  "reklamy": []
+  "reklamy": [
+    {
+      "id": "gitarowy-mentoring",
+      "aktywna": true,
+      "nieWyswietlajW": [],
+      "naglowekPomocniczy": "INDYWIDUALNA WSPÓŁPRACA 1:1",
+      "tytul": "Gitarowy Mentoring",
+      "opis": "Wyślij nagranie swojej gry i otrzymaj dokładną analizę techniki, konkretne wskazówki oraz stałe wsparcie. Ćwicz we własnym tempie, eliminuj złe nawyki i rozwijaj swoje gitarowe umiejętności krok po kroku.",
+      "grafika": "gitarowy-mentoring.jpg",
+      "przycisk": "SPRAWDŹ MENTORING",
+      "link": "https://patronite.pl/post/83303/gitarowy-mentoring"
+    },
+    {
+      "id": "lekcje-gry-na-gitarze-online",
+      "aktywna": true,
+      "nieWyswietlajW": [],
+      "naglowekPomocniczy": "INDYWIDUALNE LEKCJE ONLINE",
+      "tytul": "Lekcje gry na gitarze online",
+      "opis": "Ucz się poprawnej techniki pod okiem doświadczonego nauczyciela, unikaj złych nawyków i szybciej osiągaj swoje gitarowe cele. Program lekcji jest dopasowany do Twojego poziomu i muzycznych zainteresowań.",
+      "grafika": "lekcje-gry-na-gitarze-online.jpg",
+      "przycisk": "UMÓW LEKCJĘ",
+      "link": "https://patronite.pl/post/85842/lekcje-gry-na-gitarze-online-z-wujkiem-szponem"
+    },
+    {
+      "id": "transkrypcja-utworu",
+      "aktywna": true,
+      "nieWyswietlajW": [],
+      "naglowekPomocniczy": "UTWÓR OPRACOWANY DLA CIEBIE",
+      "tytul": "Transkrypcja Utworu",
+      "opis": "Wybierz utwór, a otrzymasz dokładne opracowanie bez zgadywania dźwięków i tracenia czasu. Materiały mogą obejmować plik Guitar Pro, tabulaturę PDF, wideo-tabulatury w różnych tempach oraz Backing Track.",
+      "grafika": "transkrypcja-utworu.jpg",
+      "przycisk": "ZAMÓW TRANSKRYPCJĘ",
+      "link": "https://patronite.pl/post/86908/transkrypcja-utworu"
+    }
+  ]
 }
