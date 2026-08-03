@@ -1,1 +1,7 @@
-
+{
+  "ustawienia": {
+    "minimalnaLiczbaPorad": 3,
+    "maksymalnaLiczbaPorad": 5
+  },
+  "reklamy": []
+}
